@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 from account.models import User
 from couple.models import Couple
 
-@csrf_exempt
+def matching(request):
+    return render(request,"matched2.html")
+
 def matchList(request):
     if request.user.sex == "남":
         sex = "여"
