@@ -1,30 +1,30 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../static/css/Register.css">
-  <script src="../static/js/Register.js" defer></script>
+  <link rel="stylesheet" href="{% static 'css/Register.css' %}">
+  <script src="{% static 'js/Register.js' %}" defer></script>
 </head>
 <body>
     <section class="header">
-        <h1><a class="Companyname" href="./Home.html">가은</a></h1>
+        <h1><a class="Companyname" href="{% url 'main:index' %}">가은</a></h1>
     </section>
   <div class="register-page">
     <div class="form">
-      <form class="register-form">
-        <input type="text" placeholder="아이디"/>
-        <input type="password" placeholder="비밀번호"/>
-        <input type="email" placeholder="이메일"/>
-        <input type="phone_num" placeholder="휴대폰 번호"/>
-        <input type="sex" placeholder="성별"/>
-        <input type="address" placeholder="주소"/>
-        <input type="age" placeholder="나이"/>
-        <input type="grade" placeholder="학년"/>
-        <input type="major" placeholder="전공"/>
+      <form class="register-form" action = "{% url 'account:sign-up' %}" method = "post">
+        <input type="text" name = "username" placeholder="아이디"/>
+        <input type="password" name = "password" placeholder="비밀번호"/>
+        <input type="phone_num" name = "phone_num" placeholder="휴대폰 번호"/>
+        <input type="sex" name = "sex" placeholder="성별"/>
+        <input type="address" name = "address" placeholder="주소"/>
+        <input type="age" name = "age" placeholder="나이"/>
+        <input type="grade" name = "grade" placeholder="학년"/>
+        <input type="major" name = "major" placeholder="전공"/>
         <button>회원가입</button>
-        <p class="message">로그인 하시겠습니까? <a href="../page/Login.html">로그인</a></p>
+        <p class="message">로그인 하시겠습니까? <a href="{% url 'account:login' %}">로그인</a></p>
       </form>
     </div>
   </div>
