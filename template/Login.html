@@ -1,23 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../static/css/Login.css">
-  <script src="../static/js/Login.js" defer></script>
+  <link rel="stylesheet" href="{% static 'css/Login.css' %}">
+  <script src="{% static 'js/Login.js' %}" defer></script>
 </head>
 <body>
   <section class="header">
-    <h1><a class="Companyname" href="./Home.html">가은</a></h1>
+    <h1><a class="Companyname" href="/">가은</a></h1>
 </section>
   <div class="login-page">
     <div class="form">
-      <form class="login-form">
-        <input type="text" placeholder="아이디"/>
-        <input type="password" placeholder="비밀번호"/>
+      <form class="login-form" action = "{% url 'account:login' %}" method = "post">
+        <input type="text" name = "username" placeholder="아이디"/>
+        <input type="password" name ="password" placeholder="비밀번호"/>
         <button id="login-btn">로그인</button>
-        <p class="message">회원이 아니신가요? <a href="../template/Register.html">회원가입</a></p>
+        <input type = "submit" id = "loginSb" style = "display:none;">
+        <p class="message">회원이 아니신가요? <a href="{% url 'account:sign-up' %}">회원가입</a></p>
       </form>
     </div>
   </div>

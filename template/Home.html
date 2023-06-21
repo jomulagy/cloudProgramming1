@@ -144,35 +144,26 @@
     </style>
 </head>
 <body>
-    <header>
-        <div>
-            <h1 style="padding: 5px;">가은</h1>
-        </div>
-        <div>
-            <a style="text-decoration: none" href="../template/Login.html">로그인</a>
-            <a href="../template/Register.html">회원가입</a>
-        </div>
-    </header>
+    {% include 'header.html' %}
     <section class="companybox">
         <h1 class="company">상명대 서울캠퍼스 @@정보 회사 "가은"</h1>
     </section>
     <section class="mainbox">
         <article>
             <h2>남자 학우수</h2>
-            <div class="male-count">0명</div>
+            <div class="male-count">{{man_num}}명</div>
         </article>
         <article>
             <h2>여자 학우수</h2>
-            <div class="female-count">0명</div>
+            <div class="female-count">{{woman_num}}명</div>
         </article>
         <aside>
             <div>
                 <h3>매칭 커플수</h3>
-                <div class="couple-count">0쌍</div>
+                <div class="couple-count">{{couple_num}}쌍</div>
             </div>
-            <div class="profile-register">프로필 등록</div>
-            <div><a class="match-receive" href="../template/matched2.html">매칭 받기</a></div>
-            <div><a class="match-receive" href="../template/coupleEnroll.html">커플 등록</a></div>
+            <div><a class="match-receive" href="{% url 'couple:matching' %}">매칭 받기</a></div>
+            <div><a class="match-receive" href="{% url 'couple:couplecreate' %}">커플 등록</a></div>
         </aside>
     </section>
 
