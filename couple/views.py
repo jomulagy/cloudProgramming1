@@ -33,16 +33,28 @@ def matchList(request,grade,age,major,address):
     else:
         sex = "남"
 
-    if request.GET.get("age") == "연하":
-        matched = User.objects.filter(sex = sex,grade = grade,age__gt = age,address = address,major = major).exclude(id = request.user.id)
-    elif request.GET.get("age") == "연상":
-        matched = User.objects.filter(sex = sex,grade = grade,age__lt = age,address = address,major = major).exclude(id = request.user.id)
+    if age == "연하":
+        print(1)
+        matched = User.objects.filter(sex = sex,grade = grade,age__lt = request.user.age,address = address,major = major)
+        print(User.objects.filter(sex = sex,grade = grade,age__lt = request.user.age))
+    elif age == "연상":
+        print(2)
+        matched = User.objects.filter(sex = sex,grade = grade,age__gt = request.user.age,address = address,major = major)
     else:
-        matched = User.objects.filter(sex = sex,grade = grade,age = age,address = address,major = major).exclude(id = request.user.id)
+        print(4)
+        matched = User.objects.filter(sex = sex,grade = grade,age = request.user.age,address = address,major = major)
 
-    context = {
-        "matched":matched
-    }
+    print(matched.count())
+    if matched.count()>0:
+        print(1)
+        context = {
+            "matched":matched[0]
+        }
+    else:
+        context = {
+            "matched" :None,
+        }
+    print(context)
     return render(request,"matched6.html",context)
 
 def coupleCreate(request):

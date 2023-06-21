@@ -101,24 +101,31 @@
 
 <body>
     <section class="header">
-        <h1><a class="Companyname" href="./Home.html">가은</a></h1>
+        <h1><a class="Companyname" href="/">가은</a></h1>
     </section>
     <section class="mid">
         <div class="midbox">
+            {% if matched %}
             <div style="display:flex; justify-content:space-around">
                 <p style="font-size: 50px;"> 매칭완료</p>
             </div>
             <div style="display:flex">
                 <button class="people3">
-                    <p style="width: 500px;"class="name">이름</p>
-                    <p class="age">나이</p>
-                    <p class="grade">학년</p>
-                    <p class="major">전공</p>
-                    <p class="phonenum">번호</p>
-                    
+                    <p style="width: 500px;"class="name">이름 : {{matched.name}}</p>
+                    <p class="age">나이 : {{matched.age}}</p>
+                    <p class="grade">학년 : {{matched.grade}}</p>
+                    <p class="major">전공 : {{matched.major}}</p>
+                    <p class="phonenum">번호 : {{matched.get_phone_num}}</p>
+
                 </button>
 
             </div>
+            {% else %}
+                <div style="display:flex; justify-content:space-around">
+                    <p style="font-size: 50px;"> 매칭실패</p>
+                </div>
+            {% endif %}
+
         </div>
     </section>
 

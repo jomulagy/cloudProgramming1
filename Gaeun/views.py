@@ -2,8 +2,9 @@ from django.shortcuts import render
 from account.models import User
 from couple.models import Couple
 def index(request):
-    man_num = User.objects.filter(sex = "남")
-    woman_num = User.objects.filter(sex = "여")
+    man_num = User.objects.filter(sex = "남").count()
+    print(man_num)
+    woman_num = User.objects.filter(sex = "여").count()
     couple_num = Couple.objects.all().count()
     context = {
         "man_num" : man_num,

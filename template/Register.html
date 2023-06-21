@@ -15,6 +15,7 @@
   <div class="register-page">
     <div class="form">
       <form class="register-form" action = "{% url 'account:sign-up' %}" method = "post">
+        {% csrf_token %}
         <input type="text" name = "username" placeholder="아이디"/>
         <input type="password" name = "password" placeholder="비밀번호"/>
         <input type="phone_num" name = "phone_num" placeholder="휴대폰 번호"/>
@@ -22,6 +23,8 @@
         <input type="address" name = "address" placeholder="주소"/>
         <input type="age" name = "age" placeholder="나이"/>
         <input type="grade" name = "grade" placeholder="학년"/>
+        <input type="grade" name = "major" placeholder="전공"/>
+
         <input style="display:none;" id="register-btn" type="submit" placeholder="회원가입"/>
         <label for="register-btn">회원가입</label> 
         <p class="message">로그인 하시겠습니까? <a href="{% url 'account:login' %}">로그인</a></p>

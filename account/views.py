@@ -11,11 +11,11 @@ def signup(request):
             user = User.objects.create_user(
                 username=request.POST['username'],
                 password=request.POST['password'],
-                first_name=request.POST['name'][0],
-                last_name=request.POST['name'][1:],
-                phone_number=request.POST.get("phonenum"),
+
+                phone_number=request.POST.get("phone_num"),
                 sex=request.POST['sex'],
                 age=request.POST['age'],
+                address = requs.POST['address'],
                 grade=request.POST['grade'],
                 major=request.POST['major']
             )

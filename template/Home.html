@@ -150,6 +150,7 @@
     </section>
     <section class="mainbox">
         <article>
+
             <h2>남자 학우수</h2>
             <div class="male-count">{{man_num}}명</div>
         </article>
@@ -162,8 +163,7 @@
                 <h3>매칭 커플수</h3>
                 <div class="couple-count">{{couple_num}}쌍</div>
             </div>
-            <div><a class="match-receive" href="{% url 'couple:matching' %}">매칭 받기</a></div>
-            <div><a class="match-receive" href="{% url 'couple:couplecreate' %}">커플 등록</a></div>
+            <div><a class="match-receive" href="{% url 'couple:matching1' %}">매칭 받기</a></div>
         </aside>
     </section>
 
@@ -176,15 +176,7 @@
         const matchReceive = document.querySelector('.match-receive');
         const coupleRegister = document.querySelector('.couple-register');
 
-        // 예시로 초기 값 설정
-        let maleCountValue = 0;
-        let femaleCountValue = 0;
-        let coupleCountValue = 0;
 
-        // 초기 값 설정
-        maleCount.textContent = maleCountValue + '명';
-        femaleCount.textContent = femaleCountValue + '명';
-        coupleCount.textContent = coupleCountValue + '쌍';
 
         // 프로필 등록 클릭 이벤트 처리
         profileRegister.addEventListener('click', function() {
