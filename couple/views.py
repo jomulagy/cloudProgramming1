@@ -2,12 +2,20 @@ from django.shortcuts import render, redirect
 from account.models import User
 from couple.models import Couple
 
+@csrf_exempt
 def matchList(request):
     if request.user.sex == "남":
         sex = "여"
     else:
         sex = "남"
-    matched = User.objects.filter(sex = sex,grade = request.POST.get('grade'),age = request.POST.get('age'),address = request.POST.get('address'),major = request.POST.get('major')).exclude(id = request.user.id)
+
+    if request.GET.get("age") == "연하":
+        matched = User.objects.filter(sex = sex,grade = request.GET.get('grade'),age__gt = request.GET.get('age'),address = request.Get.get('address'),major = request.GET.get('major')).exclude(id = request.user.id)
+    elif request.GET.get("age") == "연상":
+        matched = User.objects.filter(sex = sex,grade = request.GET.get('grade'),age__lt = request.GET.get('age'),address = request.Get.get('address'),major = request.GET.get('major')).exclude(id = request.user.id)
+    else:
+        matched = User.objects.filter(sex = sex,grade = request.GET.get('grade'),age = request.GET.get('age'),address = request.Get.get('address'),major = request.GET.get('major')).exclude(id = request.user.id)
+
     context = {
         "matched":matched
     }

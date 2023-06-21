@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61085b27-8a8c-4fb4-9ff8-11f4cbccdfdc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Gaeun/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/couple/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/static/css/Home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/static/css/Login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/static/css/Register.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/static/css/coupleEnroll.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/static/img/spongibbang.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/static/js/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/static/js/Register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/template/Home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/template/Login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/template/Register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/template/coupleEnroll.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/template/matched1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/template/matched2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/template/matched3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/template/matched4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/template/matched5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudprogramming/template/matched6.html" beforeDir="false" />
-    </list>
+    <list default="true" id="61085b27-8a8c-4fb4-9ff8-11f4cbccdfdc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
