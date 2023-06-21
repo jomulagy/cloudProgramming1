@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../static/css/coupleEnroll.css">
+  <link rel="stylesheet" href="{% static 'css/coupleEnroll.css' %}">
 </head>
 <body>
     <section class="header">
@@ -12,10 +13,12 @@
     </section>
   <div class="couple-page">
     <div class="form">
-      <form class="couple-form">
-        <input type="text" placeholder="내 아이디"/>
-        <input type="password" placeholder="상대방 아이디"/>
-        <button id="couple-btn">커플 등록</button>
+      <form class="couple-form" action = "{% url 'couple:couplecreate' %}" method = "post">
+        {% csrf_token %}
+        <input type="text" name = "user1" placeholder="내 아이디"/>
+        <input type="password" name = "user2" placeholder="상대방 아이디"/>
+        <input style="display:none;" id="register-btn" type="submit" placeholder="회원가입"/>
+        <label for="register-btn">등록</label>
     </form>
     </div>
   </div>
