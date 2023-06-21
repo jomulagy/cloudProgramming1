@@ -5,6 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Couple Matching System</title>
+    <script>
+        // 현재 URL에서 쿼리 파라미터를 추출하는 함수
+        function getQueryParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const params = {};
+            for (const [key, value] of urlParams) {
+                params[key] = value;
+            }
+            return params;
+        }
+    
+        // URL에서 쿼리 파라미터 값 추출
+        const queryParams = getQueryParams();
+        console.log(queryParams);
+        const key = queryParams.key;
+        const gradevalue = queryParams.grade;
+        const agevalue = queryParams.age;
+        const majorvalue = queryParams.major;
+        console.log(key, prevvalue); // 추출한 값 출력 (개발자 도구 콘솔에서 확인 가능)
+
+        function handleButtonClick(value) {
+            // 페이지 이동과 동시에 값을 전달하는 로직을 작성합니다.
+            // 예시로 새 창에서 다른 페이지로 이동하는 방식을 사용합니다.
+            const url = `../template/matched6.html?grade=${gradevalue}&age=${agevalue}&major=${majorvalue}&region=` + encodeURIComponent(value);
+            window.open(url, '_self');
+        }
+    </script>
     <style>
         
         @font-face {
@@ -101,66 +128,28 @@
     <section class="mid">
         <div class="midbox">
             <div>
-                <p style="font-size: 50px;">Q. 원하는 상대의 학년은? (복수)</p>
+                <p style="font-size: 50px;">Q. 원하는 지역은? (복수)</p>
             </div>
             <div>
-                <button class="answer1">
-                    <a href="../template/matched6.html">서울</a>
-                </button>
-                <button class="answer2">
-                    <a href="../template/matched6.html">경기도</a>
-                </button>
-                <button class="answer3">
-                    <a href="../template/matched6.html">인천</a>
-                </button>
-                <button class="answer4">
-                    <a href="../template/matched6.html">강원도</a>
-                </button>
-                <button class="answer5">
-                    <a href="../template/matched6.html">충청도</a>
-                </button>
-                <button class="answer6">
-                    <a href="../template/matched6.html">전라도</a>
-                </button>
-                <button class="answer7">
-                    <a href="../template/matched6.html">경상도</a>
-                </button>
-                <button class="answer8">
-                    <a href="../template/matched6.html">세종</a>
-                </button>
-                <button class="answer9">
-                    <a href="../template/matched6.html">제주도</a>
-                </button>
-                <button class="answer10">
-                    <a href="../template/matched6.html">부산</a>
-                </button>
-                <button class="answer11">
-                    <a href="../template/matched6.html">울산</a>
-                </button>
-                <button class="answer12">
-                    <a href="../template/matched6.html">대구</a>
-                </button>
-                <button class="answer13">
-                    <a href="../template/matched6.html">광주</a>
-                </button>
+                <button class="answer1" onclick="handleButtonClick('서울')">서울</button>
+                <button class="answer1" onclick="handleButtonClick('경기도')">경기도</button>
+                <button class="answer1" onclick="handleButtonClick('인천')">인천</button>
+                <button class="answer1" onclick="handleButtonClick('강원도')">강원도</button>
+                <button class="answer1" onclick="handleButtonClick('충청도')">충청도</button>
+                <button class="answer1" onclick="handleButtonClick('전라도')">전라도</button>
+                <button class="answer1" onclick="handleButtonClick('경상도')">경상도</button>
+                <button class="answer1" onclick="handleButtonClick('세종')">세종</button>
+                <button class="answer1" onclick="handleButtonClick('제주도')">제주도</button>
+                <button class="answer1" onclick="handleButtonClick('부산')">부산</button>
+                <button class="answer1" onclick="handleButtonClick('울산')">울산</button>
+                <button class="answer1" onclick="handleButtonClick('대구')">대구</button>
+                <button class="answer1" onclick="handleButtonClick('광주')">광주</button>
 
             </div>
         </div>
     </section>
 
-    <script>
-        // JavaScript 코드를 추가할 수 있습니다
-        const yesBtn = document.querySelector('.yesbtn');
-        const noBtn = document.querySelector('.nobtn');
-
-        yesBtn.addEventListener('click', function () {
-            alert('두번째 퀴즈로 넘어갑니다.');
-        });
-
-        noBtn.addEventListener('click', function () {
-            alert('마이페이지로 이동합니다.');
-        });
-    </script>
+  
 </body>
 
 </html>

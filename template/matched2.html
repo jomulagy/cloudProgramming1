@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Couple Matching System</title>
+    <script>
+        function handleButtonClick(value) {
+            // 페이지 이동과 동시에 값을 전달하는 로직을 작성합니다.
+            // 예시로 새 창에서 다른 페이지로 이동하는 방식을 사용합니다.
+            const url = '../template/matched3.html?grade=' + value;
+            window.open(url, '_self');
+        }
+    </script>
     <style>
         
         @font-face {
@@ -95,18 +103,10 @@
                 <p style="font-size: 50px;">Q. 원하는 상대의 학년은? (복수)</p>
             </div>
             <div>
-                <button class="grade1">
-                    <a href="../template/matched3.html">1</a>
-                </button>
-                <button class="grade2">
-                    <a href="../template/matched3.html">2</a>
-                </button>
-                <button class="grade3">
-                    <a href="../template/matched3.html">3</a>
-                </button>
-                <button class="grade4">
-                    <a href="../template/matched3.html">4</a>
-                </button>
+                <button class="grade1" onclick="handleButtonClick(1)">1</button>
+                <button class="grade1" onclick="handleButtonClick(2)">2</button>
+                <button class="grade1" onclick="handleButtonClick(3)">3</button>
+                <button class="grade1" onclick="handleButtonClick(4)">4</button>
             </div>
         </div>
     </section>
