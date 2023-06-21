@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couple Matching Site</title>
+    <style>
+
+        /* CSS 스타일을 추가합니다 */
+        @font-face {
+            font-family: 'TTWanjudaedunsancheB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        * {
+            text-decoration: none;
+            font-family: 'TTWanjudaedunsancheB';
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header div {
+            display: flex;
+            align-items: center;
+        }
+
+        header div button {
+            margin-left: 10px;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        header div button:hover {
+            color: #ddd;
+        }
+
+        .companybox {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .mainbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #fff;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+
+        article {
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            padding: 100px;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+        article h2 {
+            padding:20px;
+        }
+        aside {
+            background-color: #f5f5f5;
+            padding: 10px;
+        }
+
+        aside div {
+            margin-bottom: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* JavaScript로 동적으로 내용을 변경하기 위한 클래스를 추가합니다 */
+        .male-count,
+        .female-count,
+        .couple-count {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .profile-register {
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .profile-register:hover {
+            color: #555;
+        }
+
+        .match-receive {
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .match-receive:hover {
+            color: #555;
+        }
+
+        .couple-register {
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .couple-register:hover {
+            color: #555;
+        }
+        a { text-decoration: none; color: white; padding:5px; }
+    a:visited { text-decoration: none; }
+    a:hover { text-decoration: none; }
+    a:focus { text-decoration: none; }
+    a:hover, a:active { text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1 style="padding: 5px;">가은</h1>
+        </div>
+        <div>
+            <a style="text-decoration: none" href="../template/Login.html">로그인</a>
+            <a href="../template/Register.html">회원가입</a>
+        </div>
+    </header>
+    <section class="companybox">
+        <h1 class="company">상명대 서울캠퍼스 @@정보 회사 "가은"</h1>
+    </section>
+    <section class="mainbox">
+        <article>
+            <h2>남자 학우수</h2>
+            <div class="male-count">0명</div>
+        </article>
+        <article>
+            <h2>여자 학우수</h2>
+            <div class="female-count">0명</div>
+        </article>
+        <aside>
+            <div>
+                <h3>매칭 커플수</h3>
+                <div class="couple-count">0쌍</div>
+            </div>
+            <div class="profile-register">프로필 등록</div>
+            <div><a class="match-receive" href="../template/matched1.html">매칭 받기</a></div>
+            <div><a class="match-receive" href="../template/coupleEnroll.html">커플 등록</a></div>
+        </aside>
+    </section>
+
+    <script>
+        // JavaScript로 동적으로 내용을 변경합니다
+        const maleCount = document.querySelector('.male-count');
+        const femaleCount = document.querySelector('.female-count');
+        const coupleCount = document.querySelector('.couple-count');
+        const profileRegister = document.querySelector('.profile-register');
+        const matchReceive = document.querySelector('.match-receive');
+        const coupleRegister = document.querySelector('.couple-register');
+
+        // 예시로 초기 값 설정
+        let maleCountValue = 0;
+        let femaleCountValue = 0;
+        let coupleCountValue = 0;
+
+        // 초기 값 설정
+        maleCount.textContent = maleCountValue + '명';
+        femaleCount.textContent = femaleCountValue + '명';
+        coupleCount.textContent = coupleCountValue + '쌍';
+
+        // 프로필 등록 클릭 이벤트 처리
+        profileRegister.addEventListener('click', function() {
+            // 프로필 등록 동작 추가
+            alert('프로필을 등록합니다.');
+        });
+
+        // 매칭 받기 클릭 이벤트 처리
+        matchReceive.addEventListener('click', function() {
+            // 매칭 받기 동작 추가
+            alert('매칭을 받습니다.');
+        });
+
+        // 커플 등록 클릭 이벤트 처리
+        coupleRegister.addEventListener('click', function() {
+            // 커플 등록 동작 추가
+            alert('커플을 등록합니다.');
+        });
+    </script>
+</body>
+</html>

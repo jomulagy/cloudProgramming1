@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couple Matching System</title>
+    <style>
+        
+        @font-face {
+            font-family: 'TTWanjudaedunsancheB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        *{
+            font-family: 'TTWanjudaedunsancheB';
+        }
+        /* CSS 스타일을 추가합니다 */
+        body {
+            font-family: 'TTWanjudaedunsancheB';
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: #333;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .mid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            width: 100%;
+        }
+
+        .mid div {
+            background-color: #fff;
+            padding: 50px 200px 50px 200px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .yesbtn,
+        .nobtn {
+            font-size:40px;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .yesbtn:hover,
+        .nobtn:hover {
+            background-color: #555;
+        }
+        a { text-decoration: none; color: white; font-size:30px;}
+    a:visited { text-decoration: none; }
+    a:hover { text-decoration: none; }
+    a:focus { text-decoration: none; }
+    a:hover, a:active { text-decoration: none; }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <h1><a class="Companyname" href="./Home.html">가은</a></h1>
+    </section>
+    <section class="mid">
+        <div class="midbox">
+            <div>
+                <p style="font-size: 50px;">내 정보를 입력하셨나요?</p>
+            </div>
+            <div>
+                <button class="yesbtn">
+                    <a href="../template/matched2.html">넹!</a>
+                </button>
+                <button class="nobtn">
+                    <a href="../template/mypage.html">아직 ㅠ</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript 코드를 추가할 수 있습니다
+        const yesBtn = document.querySelector('.yesbtn');
+        const noBtn = document.querySelector('.nobtn');
+
+        yesBtn.addEventListener('click', function () {
+            alert('두번째 퀴즈로 넘어갑니다.');
+        });
+
+        noBtn.addEventListener('click', function () {
+            alert('마이페이지로 이동합니다.');
+        });
+    </script>
+</body>
+
+</html>
