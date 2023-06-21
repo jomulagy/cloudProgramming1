@@ -17,10 +17,10 @@
       <form class="login-form" action = "{% url 'account:login' %}" method = "post">
         <input type="text" name = "username" placeholder="아이디"/>
         <input type="password" name ="password" placeholder="비밀번호"/>
-        <button id="login-btn">로그인</button>
+        <input style="display:none;"id="login-btn" type="submit" placeholder="로그인"/>
+        <label for="login-btn">로그인</label> 
         <input type = "submit" id = "loginSb" style = "display:none;">
         <p class="message">회원이 아니신가요? <a href="{% url 'account:sign-up' %}">회원가입</a></p>
-      </form>
     </div>
   </div>
 </body>

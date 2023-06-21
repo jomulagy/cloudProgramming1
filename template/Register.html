@@ -22,9 +22,10 @@
         <input type="address" name = "address" placeholder="주소"/>
         <input type="age" name = "age" placeholder="나이"/>
         <input type="grade" name = "grade" placeholder="학년"/>
-        <input type="major" name = "major" placeholder="전공"/>
-        <button>회원가입</button>
+        <input style="display:none;" id="register-btn" type="submit" placeholder="회원가입"/>
+        <label for="register-btn">회원가입</label> 
         <p class="message">로그인 하시겠습니까? <a href="{% url 'account:login' %}">로그인</a></p>
+
       </form>
     </div>
   </div>
