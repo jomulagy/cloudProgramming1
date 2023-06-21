@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61085b27-8a8c-4fb4-9ff8-11f4cbccdfdc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/template/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/couple/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/couple/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/couple/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/couple/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/Home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/matched2.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/matched2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/matched3.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/matched3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/matched4.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/matched4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/matched5.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/matched5.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

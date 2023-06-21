@@ -28,7 +28,7 @@
         function handleButtonClick(value) {
             // 페이지 이동과 동시에 값을 전달하는 로직을 작성합니다.
             // 예시로 새 창에서 다른 페이지로 이동하는 방식을 사용합니다.
-            const url = `../template/matched6.html?grade=${gradevalue}&age=${agevalue}&major=${majorvalue}&region=` + encodeURIComponent(value);
+            const url = '/couple/match/list/{{grade}}/{{age}}/{{major}}/' + encodeURIComponent(value) + '/';
             window.open(url, '_self');
         }
     </script>

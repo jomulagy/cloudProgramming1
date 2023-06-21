@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Couple Matching System</title>
     <script>
+        console.log("{{grade}}")
         // 현재 URL에서 쿼리 파라미터를 추출하는 함수
         function getQueryParams() {
             const urlParams = new URLSearchParams(window.location.search);
@@ -15,7 +16,7 @@
             }
             return params;
         }
-    
+
         // URL에서 쿼리 파라미터 값 추출
         const queryParams = getQueryParams();
         const key = queryParams.key;
@@ -25,12 +26,12 @@
         function handleButtonClick(value) {
             // 페이지 이동과 동시에 값을 전달하는 로직을 작성합니다.
             // 예시로 새 창에서 다른 페이지로 이동하는 방식을 사용합니다.
-            const url = `../template/matched4.html?grade=${prevvalue}&age=` + encodeURIComponent(value);;
+            const url = `/couple/matching3/{{grade}}/` + encodeURIComponent(value);+'/'
             window.open(url, '_self');
         }
     </script>
     <style>
-        
+
         @font-face {
             font-family: 'TTWanjudaedunsancheB';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
@@ -110,7 +111,9 @@
 </head>
 
 <body>
+
     <section class="header">
+        {{grade}}
         <h1><a class="Companyname" href="./Home.html">가은</a></h1>
     </section>
     <section class="mid">

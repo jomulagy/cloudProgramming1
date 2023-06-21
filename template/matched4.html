@@ -22,12 +22,11 @@
         const key = queryParams.key;
         const gradevalue = queryParams.grade;
         const agevalue = queryParams.age;
-        console.log(key, prevvalue); // 추출한 값 출력 (개발자 도구 콘솔에서 확인 가능)
-
+        console.log("{{grade}}")
         function handleButtonClick(value) {
             // 페이지 이동과 동시에 값을 전달하는 로직을 작성합니다.
             // 예시로 새 창에서 다른 페이지로 이동하는 방식을 사용합니다.
-            const url = `../template/matched5.html?grade=${gradevalue}&age=${agevalue}&major=` + encodeURIComponent(value);
+            const url = '/couple/matching4/{{grade}}/{{age}}/' + encodeURIComponent(value) + '/';
             window.open(url, '_self');
         }
     </script>
@@ -117,6 +116,7 @@
 
 <body>
     <section class="header">
+        {{grade}}
         <h1><a class="Companyname" href="./Home.html">가은</a></h1>
     </section>
     <section class="mid">
